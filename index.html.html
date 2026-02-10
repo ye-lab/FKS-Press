@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)file:///C:/Users/yebez_p7e4pav/OneDrive/Desktop/NS%20club/FKS-Press%20website/FKS-Press.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FKS-Press</title>
+
+<!-- FONTS -->
+<link href="file:///C:/Users/yebez_p7e4pav/OneDrive/Desktop/NS%20club/FKS-Press%20website/FKS-Press_files/canterbury" rel="stylesheet">
+<link href="./FKS-Press_files/css2" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Roboto',sans-serif;
+  background:#f4f6f8;
+  color:#111;
+}
+
+/* ===== HEADER ===== */
+header{
+  width:100%;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-bottom:10px;
+}
+.header-top{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:12px 0;
+}
+.brand {
+  font-family: 'Canterbury', serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.brand img.logo {
+  height: 60px;
+  width: auto;
+  max-width: 60px;
+  display: block;
+  flex-shrink: 0;
+}
+
+#mainNav{
+  display:flex;
+  gap:12px;
+  margin-top:10px;
+}
+nav button{
+  background:#111;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+nav button:hover{background:#000}
+
+/* ===== HERO ===== */
+.hero{
+  background:#000;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.hero h1{
+  font-family:'Canterbury',serif;
+  font-size:48px;
+}
+
+/* ===== PAGES ===== */
+.page{
+  display:none;
+  max-width:1100px;
+  margin:30px auto;
+  background:#fff;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+.card{
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+  margin-bottom:20px;
+}
+.card h3{margin-top:0;}
+.card p{margin-bottom:0.8em;}
+.card blockquote{
+  border-left:4px solid #ddd;
+  padding-left:10px;
+  color:#555;
+  margin:10px 0;
+  font-style:italic;
+}
+.card img{
+  width:100%;
+  max-width:900px;
+  border-radius:12px;
+  margin:20px auto;
+  display:block;
+}
+
+
+.intro{
+  font-style:italic;
+  background:#eee;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:15px 0;
+  background:#fff;
+  border-top:1px solid #ddd;
+  margin-top:40px;
+  font-size:0.9em;
+  color:#555;
+}
+.inline-img {
+  width:100%;
+  max-width:850px;
+  display:block;
+  margin:30px auto;
+  border-radius:12px;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  /* Make cards/images responsive */
+  .card img,
+  .inline-img,
+  figure img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hero title */
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  /* Brand/logo adjustments */
+  .brand {
+    font-size: 28px;        /* text smaller */
+    gap: 6px;               /* smaller gap between logo and text */
+    flex-wrap: wrap;        /* allow wrapping if needed */
+    justify-content: center;
+  }
+
+  .brand img.logo {
+    height: 40px;           /* logo height */
+    max-width: 40px;        /* logo width */
+    flex-shrink: 0;         /* prevent shrinking */
+  }
+
+  /* Navigation buttons smaller */
+  #mainNav button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 24px;
+    gap: 4px;
+  }
+  .brand img.logo {
+    height: 32px;
+    max-width: 32px;
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header id="mainHeader">
+  <div class="header-top">
+    <div class="brand">
+  <img src="https://i.imgur.com/dg97Dya.png" alt="FKS Logo" class="logo">
+  <span>FKS-Press</span>
+</div>
+
+  </div>
+
+  <nav id="mainNav">
+    <button onclick="openPage(&#39;home&#39;)">Home</button>
+    <button onclick="openPage(&#39;campus&#39;)">Campus Life</button>
+    <button onclick="openPage(&#39;resources&#39;)">College Resources</button>
+    <button onclick="openPage(&#39;sports&#39;)">Sports</button>
+    <button onclick="openPage(&#39;opinions&#39;)">Opinion Pieces</button>
+    <button onclick="openPage(&#39;contact&#39;)">Contact Us</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>FKS-Press</h1>
+  <p>School News • Knowledge • Excellence</p>
+</section>
+
+<section id="home" class="page" style="display: none;">
+  <h2>Home</h2>
+  <div class="intro">
+    <p>Welcome to the first edition of FKS-Press! Our goal is to bring you school news, resources, and insights into campus life. We hope this newsletter inspires learning, curiosity, and community involvement.</p>
+    <p><strong>Editor's Note:</strong> This first edition is a special milestone created in just one month by a very small team. We thank our student writers, editors, and designers for their hard work in bringing FKS-Press to life. While we weren't able to include every event, we focused on the most exciting stories and highlights we could gather under a tight schedule. We hope you enjoy this snapshot of school life and stay tuned for more in our upcoming editions!</p>
+ <p>This edition was brought to you by Ruth Tesfahun and Yebezawit Alemayehu, editors of FKS-Press.</p>
+  </div>
+</section>
+
+<section id="campus" class="page" style="display: block;">
+  <h2>Campus Life</h2>
+  <div class="intro">
+    <p>Campus Life highlights student events, achievements, and unique experiences around FKS High School.</p>
+  </div>
+  <div id="campusContent"><div class="card"><h3>CULTURE DAY</h3><p><em>By Absalat Minale</em></p>
+    <figure style="text-align:center; margin:20px 0;">
+      <img src="./FKS-Press_files/4q2Vzt7.jpeg" alt="CULTURE DAY" style="
+          max-width:65%;
+          border-radius:12px;
+          display:block;
+          margin:0 auto;
+        ">
+      <figcaption style="font-size:0.85em; color:#555;">Grade 11 students celebrating Culture Day</figcaption>
+    </figure>
+  <p>Culture day is one representation of the diversity and unity of students in our school. This tradition started in 2024 by the current Aurelian Seniors and continued to grow as an important celebration of our diversity. The 2025 culture day was the second ever in FKS High School organized by juniors.</p><p>The grade 11 students celebrated culture day on Monday December 08, 2025. At the beginning of the event, students made an entrance through the red carpet, each showing the traditional dance of the culture they represented. They continued with other programs including drama, poem, dance, and choreography. They also brought a live chicken to the show, surprising everyone. Despite being organized by junior students, every participant had the opportunity to celebrate and enjoy their time.</p><p><img src="./FKS-Press_files/369hdYE.jpeg" alt="CULTURE DAY" class="inline-img" style="
+              max-width:65%;
+              border-radius:12px;
+              margin:30px auto;
+              display:block;
+            "></p><blockquote>I think the whole program was worth it. We did put a lot of effort starting from the red carpet to actually bringing a chicken. I personally think these tiny details were the ones which gave beauty to the program and were worth the effort. — Dagmawit Mesfin (Grade 11)</blockquote><blockquote>The hardest part of organizing the whole program was managing time and coordinating everyone... even though it was stressful, this experience taught us teamwork, unity, and responsibility. — Edom Tesfaneh (Grade 11)</blockquote><p><strong>Robel Dawit (Grade 12):</strong> The event was an amazing one. Lots of colors and cultures representing the diverse cultures of Ethiopia. The intro was the one that impressed me the most.</p><p><strong>Eldana Deresse (Grade 9):</strong> The entrance, entrance song, drama, and choreography were good and represented the cultures well. However, the speaker wasn't working properly.</p><p><strong>Amen Abreham (Grade 12):</strong> It was a well-coordinated program from beginning to end. Different varieties of programs ranging from entertainment to education.</p><p>In conclusion, 2025 culture day was a great way of showing our diverse culture and unity. While there were a few challenges it was a memorable day and we can't wait for the next event.</p><p style="font-size:0.85em;color:#555;"><em>Design by: Haseite Dawit</em></p></div><div class="card"><h3>Fountain of Knowledge School High School Question and Answer Competition</h3><p><em>By Soliyana Seifu</em></p>
+    <figure style="text-align:center; margin:20px 0;">
+      <img src="./FKS-Press_files/WGlEJNh.jpeg" alt="Fountain of Knowledge School High School Question and Answer Competition" style="
+          max-width:65%;
+          border-radius:12px;
+          display:block;
+          margin:0 auto;
+        ">
+      <figcaption style="font-size:0.85em; color:#555;">12th grade winners holding their awards</figcaption>
+    </figure>
+  <p>Academic competitions are organized with the intent of boosting learning, critical thinking, and public speaking in a competitive environment. They help improve students' focus and retention while allowing teachers to assess performance and identify learning gaps. With this aim, Fountain of Knowledge School held a Question and Answer competition for selected high school students. The competition involved Mathematics and English and was held from late December to early January.</p><p>From Grade 9, Eldana Getachew and Bereket Messay from Section A; Yoseph Dereje and Sarem Belachew from Section B; Mariamawit Mekari and Eliana Yalemsew from Section C; and Bilen Girum and Abel Efrem from Section D participated. Eldana Getachew from 9A, Sarem Belachew from 9B, and Bereket Messay from 9A secured first, second, and third place respectively. Section-wise, 9A ranked first, followed by 9B, 9D, and 9C.</p><p>From Grade 10, Yanet Sisay and Bereket Ashenafi from Section A; Fenet Girma and Lielina Seifu from Section B; Liya Mohammed and Fitsum Asnake from Section C; and Alazar Agazi and Tihtina Desta from Section D participated. Fitsum Asmake from 10C placed first, Fenet Girma from 10B second, and Bereket Ashenafi from 10A third. Section-wise, 10B ranked first, followed by 10A, 10C, and 10D.</p><p>From Grade 11, participants included Tinsae Getachew, Dagimawit Mesfin, and Alazar Masresha from Section A; Abigail Mesfin, Yebezawit Alemayehu, and Eyoel Getachew from Section B; and Saron Leulseged and Yohannes Afework from Section C. Yebezawit Alemayehu from 11B secured first place, followed by Eyoel Getachew from 11B in second place and Tinsae Getachew from 11A in third. Section-wise, 11B ranked first, followed by 11A and 11C.</p><p>From Grade 12, Robel Dawit and Muna Mohammed from Section A; Tasnim Abdulrahman and Fenet Wondimagegn from Section B; Benyas Mersha and Keren Daniel from Section C; and Danawit Asres, Metasebiya Belay, and Tsion Takele from Section D participated. Robel Dawit from 12A placed first, Tasnim Abdulrahman from 12B second, and Muna Mohammed from 12A third. Section-wise, 12A ranked first, followed by 12B, 12C, and 12D.</p><p>In addition, Robel Dawit from Natural science and Danawit Asres from Social Science competed at the sub-city level at Beshale School, where they won a trophy for the school and medals after answering every question correctly.</p><p>However, some students expressed concern that the competition was not open to all interested participants and suggested that future events allow broader participation.</p><p>In conclusion, the Question and Answer competition was a wholesome and engaging academic event that helped students test their knowledge and learn from their mistakes in an enjoyable way. Participants noted that the questions were not overly difficult but required careful thinking and concentration.</p><p style="font-size:0.85em;color:#555;"><em>Design by: Haseite Dawit</em></p></div></div>
+</section>
+
+<section id="resources" class="page" style="display: none;">
+  <h2>College Resources</h2>
+  <div class="intro">
+    <p>This section provides guidance and tips for students planning their future education and careers.</p>
+  </div>
+  <div id="resourcesContent"><div class="card"><h3>How to Find Your Future Career</h3><p><em>By Dagmawit Mesfin</em></p><blockquote>We all make choices, but in the end our choices make us. — Ken Levine</blockquote><p>A career choice is one of the most important decisions you make in your life. Roughly 4 out of 10 students worldwide are unclear about their career expectations, a number that has doubled in the last decade.</p><h4>Steps:</h4><ol><li><strong>Self-assessment:</strong> Identify your interests and skills. It could be any subject or activity that excites you.</li><li><strong>Research:</strong> Explore what you need to do to get there. Learn about industries and gain insights.</li><li><strong>Gain experience:</strong> Volunteer for occasions or clubs related to that profession, attend events, and stay active.</li><li><strong>Create a plan:</strong> Start targeting colleges and industries and remain flexible. Look for people who have achieved your dream role and learn from them.</li><li><strong>Self-assurance:</strong> Trust yourself in your choice, but always have a backup plan.</li></ol><p><strong>When is the right time to choose your career?</strong><br>There is no single right time to choose a career. It is an ongoing process that often starts in your teenage years and continues as you gain experience.</p><p>Choosing a career should be a personal decision, but family, friends, and society often influence choices.</p><p>A career built with passion provides job satisfaction, purpose, well-being, and motivation to improve. Passion should be prioritized over other aspects.</p><blockquote>The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. — Steve Jobs</blockquote><p style="font-size:0.85em; color:#555;"><em>Design by: Robsi Temesgen</em></p></div></div>
+</section>
+
+<section id="sports" class="page" style="display: none;">
+  <h2>Sports</h2>
+  <div class="intro">
+    <p>In this edition, we bring you a look back at the 2014 World Cup final between Brazil and Germany. In future editions, we'll focus on school sport events and in-school competitions once the season wraps up.</p>
+  </div>
+  <div id="sportsContent"></div>
+</section>
+
+<section id="opinions" class="page" style="display: none;">
+  <h2>Opinion Pieces</h2>
+  <div class="intro">
+    <p>Thought-provoking articles and student perspectives on education, life, and society.</p>
+  </div>
+  <div id="opinionsContent"><div class="card"><h3>Is School Preparing Us for Real Life?</h3><p><em>By Hasset Abiye</em></p>
+    <img src="./FKS-Press_files/XtRvcd8.jpeg" alt="Is School Preparing Us for Real Life?" style="
+        max-width:55%;
+        border-radius:12px;
+        margin:20px auto;
+        display:block;
+      ">
+  <p>School is meant to prepare us for the future, but often it focuses more on exams than real-life skills. While it teaches some important basics, it doesn’t always emphasize the skills we need outside the classroom.</p><p>On the positive side, school helps develop discipline: meeting deadlines, punctuality, and schedules. Subjects like math and language provide foundational knowledge useful in everyday life. These skills give students a strong starting point for future challenges.</p><p>Much of the focus is on grades and memorization. Many students study primarily to pass tests, and what they learn is quickly forgotten. In real life, success depends more on problem-solving, critical thinking, and adaptability.</p><p>Another area to strengthen is practical life skills. Many students graduate without guidance on managing money, handling stress, communicating effectively, or making informed career choices.</p><p>Schools are increasingly aware of mental health. While academic demands can be stressful, supporting student well-being is a growing priority.</p><p>In my view, school provides an important foundation but doesn’t fully prepare students for life beyond the classroom. Balancing academic learning with real-life skills, critical thinking, and well-being would better equip students for the future.</p></div></div>
+</section>
+
+<section id="contact" class="page" style="display: none;">
+  <h2>Contact Us</h2>
+  <div class="intro">
+    <p>We would love to hear from you! Reach out with suggestions, feedback, or to contribute to FKS-Press.</p>
+    <p>You can email us directly at <a href="mailto:fks.press25@gmail.com">fks.press25@gmail.com</a></p>
+  </div>
+</section>
+
+
+<footer>© <span id="year">2026</span> FKS-Press</footer>
+
+<script>
+// ===== YEAR =====
+document.getElementById('year').innerText = new Date().getFullYear();
+
+// ===== FULL JSON DATA =====
+const articles = {
+   "campus_life": [
+    {
+      
+    "title": "CULTURE DAY",
+    "header_image": "https://i.imgur.com/4q2Vzt7.jpeg",
+    "header_caption": "Grade 11 students celebrating Culture Day",
+
+    "inline_image": {
+      "src": "https://i.imgur.com/369hdYE.jpeg",
+      "after_paragraph": 2,
+      "size": "65%"
+    },
+
+      "author": "Absalat Minale",
+      "designer": "Haseite Dawit",
+      "body": "Culture day is one representation of the diversity and unity of students in our school. This tradition started in 2024 by the current Aurelian Seniors and continued to grow as an important celebration of our diversity. The 2025 culture day was the second ever in FKS High School organized by juniors.\n\nThe grade 11 students celebrated culture day on Monday December 08, 2025. At the beginning of the event, students made an entrance through the red carpet, each showing the traditional dance of the culture they represented. They continued with other programs including drama, poem, dance, and choreography. They also brought a live chicken to the show, surprising everyone. Despite being organized by junior students, every participant had the opportunity to celebrate and enjoy their time.",
+      "organizer_quotes": [
+        {
+          "name": "Dagmawit Mesfin",
+          "grade": "11",
+          "text": "I think the whole program was worth it. We did put a lot of effort starting from the red carpet to actually bringing a chicken. I personally think these tiny details were the ones which gave beauty to the program and were worth the effort."
+        },
+        {
+          "name": "Edom Tesfaneh",
+          "grade": "11",
+          "text": "The hardest part of organizing the whole program was managing time and coordinating everyone... even though it was stressful, this experience taught us teamwork, unity, and responsibility."
+        }
+      ],
+      "student_feedback": [
+        {
+          "name": "Robel Dawit",
+          "grade": "12",
+          "comment": "The event was an amazing one. Lots of colors and cultures representing the diverse cultures of Ethiopia. The intro was the one that impressed me the most."
+        },
+        {
+          "name": "Eldana Deresse",
+          "grade": "9",
+          "comment": "The entrance, entrance song, drama, and choreography were good and represented the cultures well. However, the speaker wasn't working properly."
+        },
+        {
+          "name": "Amen Abreham",
+          "grade": "12",
+          "comment": "It was a well-coordinated program from beginning to end. Different varieties of programs ranging from entertainment to education."
+        }
+      ],
+      "conclusion": "In conclusion, 2025 culture day was a great way of showing our diverse culture and unity. While there were a few challenges it was a memorable day and we can't wait for the next event."
+    },
+    {
+  "title": "Fountain of Knowledge School High School Question and Answer Competition",
+  "image": "https://i.imgur.com/WGlEJNh.jpeg",
+  "header_caption": "12th grade winners holding their awards",
+  "author": "Soliyana Seifu",
+  "designer":"Haseite Dawit",
+  "body": "Academic competitions are organized with the intent of boosting learning, critical thinking, and public speaking in a competitive environment. They help improve students' focus and retention while allowing teachers to assess performance and identify learning gaps. With this aim, Fountain of Knowledge School held a Question and Answer competition for selected high school students. The competition involved Mathematics and English and was held from late December to early January.\n\nFrom Grade 9, Eldana Getachew and Bereket Messay from Section A; Yoseph Dereje and Sarem Belachew from Section B; Mariamawit Mekari and Eliana Yalemsew from Section C; and Bilen Girum and Abel Efrem from Section D participated. Eldana Getachew from 9A, Sarem Belachew from 9B, and Bereket Messay from 9A secured first, second, and third place respectively. Section-wise, 9A ranked first, followed by 9B, 9D, and 9C.\n\nFrom Grade 10, Yanet Sisay and Bereket Ashenafi from Section A; Fenet Girma and Lielina Seifu from Section B; Liya Mohammed and Fitsum Asnake from Section C; and Alazar Agazi and Tihtina Desta from Section D participated. Fitsum Asmake from 10C placed first, Fenet Girma from 10B second, and Bereket Ashenafi from 10A third. Section-wise, 10B ranked first, followed by 10A, 10C, and 10D.\n\nFrom Grade 11, participants included Tinsae Getachew, Dagimawit Mesfin, and Alazar Masresha from Section A; Abigail Mesfin, Yebezawit Alemayehu, and Eyoel Getachew from Section B; and Saron Leulseged and Yohannes Afework from Section C. Yebezawit Alemayehu from 11B secured first place, followed by Eyoel Getachew from 11B in second place and Tinsae Getachew from 11A in third. Section-wise, 11B ranked first, followed by 11A and 11C.\n\nFrom Grade 12, Robel Dawit and Muna Mohammed from Section A; Tasnim Abdulrahman and Fenet Wondimagegn from Section B; Benyas Mersha and Keren Daniel from Section C; and Danawit Asres, Metasebiya Belay, and Tsion Takele from Section D participated. Robel Dawit from 12A placed first, Tasnim Abdulrahman from 12B second, and Muna Mohammed from 12A third. Section-wise, 12A ranked first, followed by 12B, 12C, and 12D.\n\nIn addition, Robel Dawit from Natural science and Danawit Asres from Social Science competed at the sub-city level at Beshale School, where they won a trophy for the school and medals after answering every question correctly.\n\nHowever, some students expressed concern that the competition was not open to all interested participants and suggested that future events allow broader participation.\n\nIn conclusion, the Question and Answer competition was a wholesome and engaging academic event that helped students test their knowledge and learn from their mistakes in an enjoyable way. Participants noted that the questions were not overly difficult but required careful thinking and concentration."
+}
+
+  ],
+  "resources": [
+    {
+  "title": "How to Find Your Future Career",
+   "image": "https://i.imgur.com/8BdFmWs.jpeg",
+   "header_caption": "Multiple pathways a student can take after highschool",
+  "author": "Dagmawit Mesfin",
+  "designer": "Robsi Temesgen",
+  "type": "resource",
+  "opening_quote": {
+    "text": "We all make choices, but in the end our choices make us.",
+    "author": "Ken Levine"
+  },
+  "introduction": {
+    "text": "A career choice is one of the most important decisions you make in your life. Roughly 4 out of 10 students worldwide are unclear about their career expectations, a number that has doubled in the last decade.",
+    "common_mistakes": [
+      "Ignoring personal interests",
+      "Giving in to parental or peer pressure",
+      "Chasing high salaries over long-term satisfaction",
+      "Failing to research job realities",
+      "Focusing only on passion without considering market demand"
+    ],
+    "career_regret_statistics": {
+      "millennials": "70%",
+      "gen_x": "69%"
+    },
+    "guiding_question": "How do I make the right choice?"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "title": "Self-assessment",
+      "description": "Identify your interests and skills. It could be any subject or activity that excites you."
+    },
+    {
+      "step": 2,
+      "title": "Research",
+      "description": "Explore what you need to do to get there. Learn about industries and gain insights."
+    },
+    {
+      "step": 3,
+      "title": "Gain experience",
+      "description": "Volunteer for occasions or clubs related to that profession, attend events, and stay active."
+    },
+    {
+      "step": 4,
+      "title": "Create a plan",
+      "description": "Start targeting colleges and industries and remain flexible. Look for people who have achieved your dream role and learn from them."
+    },
+    {
+      "step": 5,
+      "title": "Self-assurance",
+      "description": "Trust yourself in your choice, but always have a backup plan."
+    }
+  ],
+  "career_timing": {
+    "question": "When is the right time to choose your career?",
+    "answer": "There is no single right time to choose a career. It is an ongoing process that often starts in your teenage years and continues as you gain experience.",
+    "decision_stages": [
+      "High school exploration",
+      "College majors and internships",
+      "Later career changes due to dissatisfaction"
+    ]
+  },
+  "external_influences": {
+    "description": "Choosing a career should be a personal decision, but family, friends, and society often influence choices.",
+    "statistics": {
+      "parental_pressure_white_collar": "82%",
+      "working_in_parent_chosen_field": "65%"
+    }
+  },
+  "conclusion": {
+    "message": "A career built with passion provides job satisfaction, purpose, well-being, and motivation to improve. Passion should be prioritized over other aspects.",
+    "closing_quote": {
+      "text": "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+      "author": "Steve Jobs"
+    }
+  }
+}
+  ],
+  "sports": [
+    {
+  "title": "THE MATCH BRAZIL WILL NEVER FORGET",
+  "image":"https://i.imgur.com/yxoNWIo.jpeg",
+  "header_caption":"Brazilian players looking defeated after the match",
+  "author": "Saron Leulseged",
+  "designer":"Amran Ermias",
+  "body": "“The Mineiraço,” a term given by Brazilians, is used to remember one of the worst defeats in the history of Brazilian football. It refers to the semi-final of the 2014 World Cup between Brazil and Germany — a defeat no one expected or imagined, as Brazil lost 7–1 to Germany.\n\nThis all started during the 2014 Brazil World Cup. Sixty-four matches were played, with Brazil advancing through both the group and knockout stages, beating Chile, who were ranked 13th in the FIFA rankings, and Colombia in the quarter-final.\n\nWhen they were paired with Germany for the semi-final, everyone expected a landslide — but not the one that followed. July 8, 2014. Belo Horizonte, Brazil. The match began with over 60,000 people in the stadium. The first goal went to Germany, then the next, and then another. Five goals were scored within 29 minutes.\n\nThe first two goals amazed everyone, but as the minutes passed, confusion took over. How? people asked. By the second half, the score was 7–0. Brazil did score a consolation goal; however, that did little to ease the pain suggested by its name.\n\nStill talked about today, the Mineiraço remains a source of shame, especially since it was a home loss. It is remembered by Brazilians every year on July 8, its anniversary. Even years later, it remains at the core of many football memes and jokes on social media. However, Brazil has long redeemed itself, continuing to be seen as one of the best football nations globally and producing some of the greatest legends in the sport."
+}
+
+  ],
+  "opinions": [
+    {
+      "title": "Is School Preparing Us for Real Life?",
+      "author": "Hasset Abiye",
+      "image":"https://i.imgur.com/XtRvcd8.jpeg",
+          "body": "School is meant to prepare us for the future, but often it focuses more on exams than real-life skills. While it teaches some important basics, it doesn’t always emphasize the skills we need outside the classroom.\n\nOn the positive side, school helps develop discipline: meeting deadlines, punctuality, and schedules. Subjects like math and language provide foundational knowledge useful in everyday life. These skills give students a strong starting point for future challenges.\n\nMuch of the focus is on grades and memorization. Many students study primarily to pass tests, and what they learn is quickly forgotten. In real life, success depends more on problem-solving, critical thinking, and adaptability.\n\nAnother area to strengthen is practical life skills. Many students graduate without guidance on managing money, handling stress, communicating effectively, or making informed career choices.\n\nSchools are increasingly aware of mental health. While academic demands can be stressful, supporting student well-being is a growing priority.\n\nIn my view, school provides an important foundation but doesn’t fully prepare students for life beyond the classroom. Balancing academic learning with real-life skills, critical thinking, and well-being would better equip students for the future."
+    }
+  ]
+};
+
+// ===== RENDER FUNCTION =====
+function renderArticles(section, containerId){
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+  if(!articles[section]) return;
+
+  articles[section].forEach(article=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    let html = "";
+
+    // ===== TITLE =====
+    html += `<h3>${article.title}</h3>`;
+
+    // ===== AUTHOR =====
+    if(article.author){
+      html += `<p><em>By ${article.author}</em></p>`;
+    }
+
+ 
+// ===== HEADER IMAGE (AFTER TITLE) =====
+const headerImg = article.header_image || article.image;
+
+if(headerImg){
+  html += `
+    <figure style="text-align:center; margin:20px 0;">
+      <img 
+        src="${headerImg}" 
+        alt="${article.title}"
+        style="
+          max-width:65%;
+          border-radius:12px;
+          display:block;
+          margin:0 auto;
+        "
+      >
+      ${article.header_caption ? `<figcaption style="font-size:0.85em; color:#555;">${article.header_caption}</figcaption>` : ''}
+    </figure>
+  `;
+}
+
+
+    // ===== OPENING QUOTE =====
+    if(article.opening_quote){
+      html += `<blockquote>${article.opening_quote.text} — ${article.opening_quote.author}</blockquote>`;
+    }
+
+    // ===== INTRO =====
+    if(article.introduction){
+      html += `<p>${article.introduction.text}</p>`;
+    }
+
+    // ===== BODY + INLINE IMAGE =====
+    if(article.body){
+      let paragraphs = article.body.split(/\n+/);
+
+      if(article.inline_image){
+        const index = Math.min(
+          article.inline_image.after_paragraph,
+          paragraphs.length
+        );
+
+        paragraphs.splice(
+          index,
+          0,
+          `<img 
+            src="${article.inline_image.src}"
+            alt="${article.title}" 
+  class="inline-img"
+            style="
+              max-width:${article.inline_image.size || "65%"};
+              border-radius:12px;
+              margin:30px auto;
+              display:block;
+            "
+          >`
+        );
+      }
+
+      html += `<p>${paragraphs.join("</p><p>")}</p>`;
+    }
+
+    // ===== ORGANIZER QUOTES =====
+    if(article.organizer_quotes){
+      article.organizer_quotes.forEach(q=>{
+        html += `<blockquote>${q.text} — ${q.name} (Grade ${q.grade})</blockquote>`;
+      });
+    }
+
+    // ===== STUDENT FEEDBACK =====
+    if(article.student_feedback){
+      article.student_feedback.forEach(f=>{
+        html += `<p><strong>${f.name} (Grade ${f.grade}):</strong> ${f.comment}</p>`;
+      });
+    }
+
+    // ===== STEPS =====
+    if(article.steps){
+      html += "<h4>Steps:</h4><ol>";
+      article.steps.forEach(s=>{
+        html += `<li><strong>${s.title}:</strong> ${s.description}</li>`;
+      });
+      html += "</ol>";
+    }
+
+    // ===== CAREER TIMING =====
+    if(article.career_timing){
+      html += `<p><strong>${article.career_timing.question}</strong><br>${article.career_timing.answer}</p>`;
+    }
+
+    // ===== EXTERNAL INFLUENCES =====
+    if(article.external_influences){
+      html += `<p>${article.external_influences.description}</p>`;
+    }
+
+    // ===== CONCLUSION =====
+    if(article.conclusion){
+      if(typeof article.conclusion === "string"){
+        html += `<p>${article.conclusion}</p>`;
+      } else {
+        html += `<p>${article.conclusion.message}</p>`;
+        if(article.conclusion.closing_quote){
+          html += `<blockquote>${article.conclusion.closing_quote.text} — ${article.conclusion.closing_quote.author}</blockquote>`;
+        }
+      }
+    }
+
+    // ===== DESIGN CREDIT =====
+    if(article.designer){
+      html += `<p style="font-size:0.85em;color:#555;"><em>Design by: ${article.designer}</em></p>`;
+    }
+
+    card.innerHTML = html;
+    container.appendChild(card);
+  });
+}
+
+// ===== OPEN PAGE FUNCTION =====
+function openPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+  document.getElementById(id).style.display='block';
+  
+  switch(id){
+    case 'campus': renderArticles('campus_life','campusContent'); break;
+    case 'resources': renderArticles('resources','resourcesContent'); break;
+    case 'sports': renderArticles('sports','sportsContent'); break;
+    case 'opinions': renderArticles('opinions','opinionsContent'); break;
+  }
+}
+
+// Open Home by default
+openPage('home');
+
+// ===== CONTACT FORM SUBMISSION =====
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Thank you! Your message has been received.');
+  this.reset();
+});
+</script>
+
+
+
+</body></html>
